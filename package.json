@@ -1,0 +1,14 @@
+{
+  "name": "sml_1.1",
+  "version": "0.0.0",
+  "description": "du an nodeJS UwU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bon UwU",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
