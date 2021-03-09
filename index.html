@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1 {
+            color: purple;
+            text-align: center;
+        }
+        h2 {
+            color: red;
+            text-shadow: purple;
+        }
+        p {
+            font-family: times 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+    </style>
+
+    <head>
+        <title>Hello World</title>
+    </head>
+    
+    <body>
+        <h1>NodeJS SML 01</h1>
+        <h2>Testing</h2>
+        <button onclick="goBack()">Go Back</button>
+
+        <p>Notice that clicking on the Back button here will not result in any action, because there is no previous URL in the history list.</p>
+
+        <script>
+        function goBack() {
+            window.history.back();
+        }
+        </script>
+        <!-- oh, can't touch me -->
+        <button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+            touch me senpai
+        </button>
+        <p id="demo"></p>
+    </body>
+
+</html>
