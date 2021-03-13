@@ -7,23 +7,14 @@ const portHome = 3000;
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+app.use('/public', express.static('./public'));
+
 
 app.get('/', (req, res) => {
-  res.send('Homepage <br />'+
-  '<a href="/uwu" onclick=>click me</a> <br />' +
-  '<a href="/test" onclick=>testing</a> <br />');
+  res.render('client/index');
 })
-
-app.get('/uwu', (req, res) => {
-    res.send(' <a href="/" onclick=>click me</a>');
-})
-
-app.get('/test', function(req, res) {
-    res.sendFile('/index.html', {root: __dirname });
-    //res.send(' <a href="/" onclick=>click me</a>');
-});
 
 app.listen(portHome, () => {
   console.log(`http://localhost:${portHome}`);
-  console.log('using \\news to go to news page');
+  //console.log('using \\news to go to news page');
 })

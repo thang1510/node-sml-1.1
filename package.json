@@ -1,15 +1,15 @@
 {
   "name": "sml_1.1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "du an nodeJS UwU",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "author": "bon UwU",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
