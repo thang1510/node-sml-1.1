@@ -4,6 +4,10 @@ const portHome = 3000;
 //const portNews = 1001;
 //const portDetail = 1010;
 
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+
 app.get('/', (req, res) => {
   res.send('Homepage <br />'+
   '<a href="/uwu" onclick=>click me</a> <br />' +
