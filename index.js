@@ -14,7 +14,7 @@ app.engine('ejs', ejsEngine);
 app.use('/public', express.static('./public'));
 
 app.get('/', (req, res) => {
-  res.render('client/index');
+  res.render('client/pages/index');
 });
 /*
 app.get('/index', (req, res) => {
@@ -22,19 +22,19 @@ app.get('/index', (req, res) => {
 });
 */
 app.get('/home', (req, res) => {
-  res.render('client/index.ejs');
+  res.render('client/pages/index.ejs');
 });
 
 app.get('/post', (req, res) => {
-  res.render('client/post.ejs');
+  res.render('client/pages/post.ejs');
 });
 
 app.get('/contact', (req, res) => {
-  res.render('client/contact.ejs');
+  res.render('client/pages/contact.ejs');
 });
 
 app.get('/about', (req, res) => {
-  res.render('client/about.ejs');
+  res.render('client/pages/about.ejs');
 })
 
 app.listen(portHome, () => {
