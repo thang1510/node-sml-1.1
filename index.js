@@ -1,4 +1,6 @@
 const express = require('express');
+
+const ejsEngine = require('ejs-mate');
 const app = express();
 const portHome = 3000;
 //const portNews = 1001;
@@ -7,11 +9,32 @@ const portHome = 3000;
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-app.use('/public', express.static('./public'));
+app.engine('ejs', ejsEngine);
 
+app.use('/public', express.static('./public'));
 
 app.get('/', (req, res) => {
   res.render('client/index');
+});
+/*
+app.get('/index', (req, res) => {
+  res.render('client/index');
+});
+*/
+app.get('/home', (req, res) => {
+  res.render('client/index.ejs');
+});
+
+app.get('/post', (req, res) => {
+  res.render('client/post.ejs');
+});
+
+app.get('/contact', (req, res) => {
+  res.render('client/contact.ejs');
+});
+
+app.get('/about', (req, res) => {
+  res.render('client/about.ejs');
 })
 
 app.listen(portHome, () => {
