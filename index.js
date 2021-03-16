@@ -14,19 +14,60 @@ app.engine('ejs', ejsEngine);
 app.use('/public', express.static('./public'));
 
 app.get('/', (req, res) => {
-  res.render('client/pages/index');
+  let posts = [{
+    title: "One Piece",
+    description: "Manga",
+    author: "Eiichiro Oda",
+    date: "March 16, 2021"
+  },
+  {
+    title: "Attack on Titan",
+    description: "Manga",
+    author: "Hajime Isayama",
+    date: "March 16, 2021"
+  },
+  {
+    title: "Dragon Ball",
+    description: "Manga ",
+    author: "Akira Toriyama",
+    date: "March 16, 2021"
+  }
+];
+  res.render('client/pages/index', {posts:posts});
 });
-/*
-app.get('/index', (req, res) => {
-  res.render('client/index');
-});
-*/
+
 app.get('/home', (req, res) => {
-  res.render('client/pages/index.ejs');
+  let posts = [{
+    title: "One Piece",
+    description: "Manga",
+    author: "Eiichiro Oda",
+    date: "March 16, 2021"
+  },
+  {
+    title: "Attack on Titan",
+    description: "Manga",
+    author: "Hajime Isayama",
+    date: "March 16, 2021"
+  },
+  {
+    title: "Dragon Ball",
+    description: "Manga ",
+    author: "Akira Toriyama",
+    date: "March 16, 2021"
+  }
+];
+  res.render('client/pages/index', {posts:posts});
 });
 
 app.get('/post', (req, res) => {
-  res.render('client/pages/post.ejs');
+  let heading = "UwU";
+  let quote   = "\"ah I see, you are a man of culture as well\"";
+  let content = "nothing to see here";
+  res.render('client/pages/post.ejs', {
+    heading : heading,
+    quote : quote,
+    content : content
+  });
 });
 
 app.get('/contact', (req, res) => {
